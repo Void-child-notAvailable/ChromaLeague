@@ -1,8 +1,6 @@
 package net.booone.chromaleague.hud.animations;
 
-
 import net.booone.chromaleague.hud.colors.BackgroundBreathingColor;
-import net.booone.chromaleague.state.RunningState;
 import net.booone.razersdk.animation.AnimatedFrame;
 import net.booone.razersdk.animation.Frame;
 import net.booone.razersdk.animation.SimpleFrame;
@@ -16,7 +14,7 @@ import java.util.Set;
 
 import static net.booone.razersdk.sdk.RzKey.*;
 
-public class BaronBuffBackgroundAnimation extends AnimatedFrame {
+public class BaronBuffBackgroundAnimation5 extends AnimatedFrame {
     private final BreathingColor baronBuffColor = new BackgroundBreathingColor(new StaticColor(200, 0, 200));
 
 
@@ -35,9 +33,8 @@ public class BaronBuffBackgroundAnimation extends AnimatedFrame {
     public static Set<RzKey> buildBaronArea() {
 
         return new RzKeyJoiner()
-                .with(new RzKeySelector().withRowOf(RZKEY_Q).withColumnBetween(RZKEY_Q, RZKEY_U))
-                .with(new RzKeySelector().withRowOf(RZKEY_A).withColumnBetween(RZKEY_A, RZKEY_H))
-                .with(new RzKeySelector().withRowOf(RZKEY_Z).withColumnBetween(RZKEY_Z, RZKEY_B)).join();
-
+                .with(new RzKeySelector().withRowOf(RZKEY_Q).withColumnBetween(RZKEY_Q, RZKEY_W))
+                .with(new RzKeySelector().withRowOf(RZKEY_A).withColumnBetween(RZKEY_A, RZKEY_S))
+                .with(new RzKeySelector().withRowOf(RZKEY_Z).withColumnBetween(RZKEY_Z, RZKEY_Z)).join();
     }
 }
