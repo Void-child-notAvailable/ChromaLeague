@@ -1,6 +1,7 @@
 package net.booone.chromaleague.hud.parts.resource;
 
 import net.booone.chromaleague.hud.AnimationTester;
+import net.booone.chromaleague.rest.resource.GnarFuryBar;
 import org.junit.jupiter.api.Test;
 
 class GnarFuryBarTest extends AbstractResourceTest {

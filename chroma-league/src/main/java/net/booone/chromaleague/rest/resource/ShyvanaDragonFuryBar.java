@@ -1,4 +1,4 @@
-package net.booone.chromaleague.hud.parts.resource;
+package net.booone.chromaleague.rest.resource;
 
 import net.booone.chromaleague.hud.colors.BackgroundBreathingColor;
 import net.booone.chromaleague.hud.parts.ProgressBar;
@@ -9,18 +9,18 @@ import net.booone.razersdk.color.BreathingColor;
 import net.booone.razersdk.color.Color;
 import net.booone.razersdk.color.StaticColor;
 
-public class YasuoWindBar extends AnimatedFrame {
-    public static final BreathingColor WIND_SHIELD_READY_COLOR = new BackgroundBreathingColor(StaticColor.WHITE);
-    public static final StaticColor WIND_SHIELD_COLOR = StaticColor.GRAY;
+public class ShyvanaDragonFuryBar extends AnimatedFrame {
+    public static final StaticColor DRAGON_FURY_COLOR = StaticColor.ORANGE;
+    private static final BreathingColor ULTIMATE_READY_COLOR = new BackgroundBreathingColor(StaticColor.RED);
 
     @Override
     public Frame getFrame() {
         final int resourcePercentage = GameStateHelper.getResourcePercentage();
         Color color;
         if (resourcePercentage == 100) {
-            color = WIND_SHIELD_READY_COLOR.getColor();
+            color = ULTIMATE_READY_COLOR.getColor();
         } else {
-            color = WIND_SHIELD_COLOR;
+            color = DRAGON_FURY_COLOR;
         }
         addAnimationFrame(new ProgressBar(ResourceBars.getResourceBarKeys(), resourcePercentage, color));
         return super.getFrame();

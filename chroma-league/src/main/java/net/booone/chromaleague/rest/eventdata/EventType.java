@@ -15,6 +15,8 @@ public enum EventType {
     ALLY_INFERNAL_DRAGON_KILL,
     ALLY_MOUNTAIN_DRAGON_KILL,
     ALLY_OCEAN_DRAGON_KILL,
+    ALLY_GRUBS_KILL,
+    ENEMY_GRUBS_KILL,
     ENEMY_BARON_KILL,
     ENEMY_HERALD_KILL,
     ENEMY_CHEMTECH_DRAGON_KILL,
@@ -33,6 +35,7 @@ public enum EventType {
 
     public static EventType fromEvent(Event event) {
         if (event != null) {
+            System.out.println(event.EventName());
             if ("GameStart".equals(event.EventName())) {
                 return GAME_START;
             }
@@ -92,6 +95,13 @@ public enum EventType {
                         yield ENEMY_MOUNTAIN_DRAGON_KILL;
                     }
                 };
+            }
+
+            if("HordeKill".equals(event.EventName())){
+                if (RunningState.getGameState().getPlayerList().isAlly(event.KillerName())) {
+                    return ALLY_GRUBS_KILL;
+                }
+                return ENEMY_GRUBS_KILL;
             }
 
             if ("BaronKill".equals(event.EventName())) {

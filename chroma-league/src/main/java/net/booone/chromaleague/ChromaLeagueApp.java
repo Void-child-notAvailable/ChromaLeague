@@ -23,8 +23,8 @@ public final class ChromaLeagueApp {
 
     private ChromaLeagueApp() {
     }
-
     public static void main(String... args) {
         chromaLeague.runChromaLeague();
     }
 }
+

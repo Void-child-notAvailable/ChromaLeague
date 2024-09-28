@@ -1,4 +1,4 @@
-package net.booone.chromaleague.hud.parts.resource;
+package net.booone.chromaleague.rest.resource;
 
 import net.booone.chromaleague.hud.colors.BackgroundBreathingColor;
 import net.booone.chromaleague.hud.parts.ProgressBar;
@@ -9,18 +9,17 @@ import net.booone.razersdk.color.BreathingColor;
 import net.booone.razersdk.color.Color;
 import net.booone.razersdk.color.StaticColor;
 
-public class ShyvanaDragonFuryBar extends AnimatedFrame {
-    public static final StaticColor DRAGON_FURY_COLOR = StaticColor.ORANGE;
-    private static final BreathingColor ULTIMATE_READY_COLOR = new BackgroundBreathingColor(StaticColor.RED);
+public class RengarFerocityBar extends AnimatedFrame {
+    private static final BreathingColor FEROCITY_FULL_COLOR = new BackgroundBreathingColor(StaticColor.YELLOW, 5);
 
     @Override
     public Frame getFrame() {
         final int resourcePercentage = GameStateHelper.getResourcePercentage();
         Color color;
         if (resourcePercentage == 100) {
-            color = ULTIMATE_READY_COLOR.getColor();
+            color = FEROCITY_FULL_COLOR.getColor();
         } else {
-            color = DRAGON_FURY_COLOR;
+            color = StaticColor.WHITE;
         }
         addAnimationFrame(new ProgressBar(ResourceBars.getResourceBarKeys(), resourcePercentage, color));
         return super.getFrame();

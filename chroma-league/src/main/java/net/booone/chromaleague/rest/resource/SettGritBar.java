@@ -1,4 +1,4 @@
-package net.booone.chromaleague.hud.parts.resource;
+package net.booone.chromaleague.rest.resource;
 
 import net.booone.chromaleague.hud.colors.BackgroundBreathingColor;
 import net.booone.chromaleague.hud.parts.ProgressBar;

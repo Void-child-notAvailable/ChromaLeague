@@ -65,7 +65,6 @@ class RzKeySelectorTest {
                 .withRectangleBetween(RzKey.RZKEY_NUMPAD7, RzKey.RZKEY_NUMPAD2).asSet();
 
         //then
-        //then
         assertFalse(rzKeys.isEmpty());
         assertEquals(6, rzKeys.size());
         assertTrue(rzKeys.containsAll(expected));

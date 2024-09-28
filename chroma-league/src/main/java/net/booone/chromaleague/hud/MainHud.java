@@ -9,7 +9,7 @@ import net.booone.chromaleague.hud.parts.EventAnimation;
 import net.booone.chromaleague.hud.parts.GoldBar;
 import net.booone.chromaleague.hud.parts.dragons.DragonBar;
 import net.booone.chromaleague.hud.parts.health.HealthBar;
-import net.booone.chromaleague.hud.parts.resource.ResourceBars;
+import net.booone.chromaleague.rest.resource.ResourceBars;
 import net.booone.chromaleague.state.GameStateHelper;
 import net.booone.razersdk.animation.AnimatedFrame;
 import net.booone.razersdk.animation.Frame;

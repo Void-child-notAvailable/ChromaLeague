@@ -3,10 +3,10 @@ package net.booone.chromaleague.hud;
 import net.booone.razersdk.sdk.RzKey;
 import net.booone.razersdk.sdk.RzKeySelector;
 
+import java.util.Arrays;
 import java.util.List;
 
-import static net.booone.razersdk.sdk.RzKey.RZKEY_PAGEDOWN;
-import static net.booone.razersdk.sdk.RzKey.RZKEY_PRINTSCREEN;
+import static net.booone.razersdk.sdk.RzKey.*;
 
 public final class PredefinedKeySets {
     public static final List<RzKey> BLACKWIDOW_FIRST_ROW = new RzKeySelector().withRow(0).sortedByColumn().asList();
@@ -16,6 +16,7 @@ public final class PredefinedKeySets {
     public static final List<RzKey> BLACKWIDOW_FIFTH_ROW = new RzKeySelector().withRow(4).sortedByColumn().asList();
     public static final List<RzKey> BLACKWIDOW_SIXTH_ROW = new RzKeySelector().withRow(5).sortedByColumn().asList();
     public static final List<RzKey> BLACKWIDOW_FUNCTIONAL = new RzKeySelector().withRectangleBetween(RZKEY_PRINTSCREEN, RZKEY_PAGEDOWN).asList();
+    public static final List<RzKey> BLACKWIDOW_FUNCTIONAL_GRUBS= Arrays.asList(RZKEY_INSERT,RZKEY_END,RZKEY_PAGEUP,RZKEY_DELETE,RZKEY_HOME,RZKEY_PAGEDOWN);
     public static final List<RzKey> FIRST_NUMPAD_COLUMN = new RzKeySelector().withColumn(18).sortedByRow().asList();
     public static final List<RzKey> SECOND_NUMPAD_COLUMN = new RzKeySelector().withColumn(19).sortedByRow().asList();
     public static final List<RzKey> THIRD_NUMPAD_COLUMN = new RzKeySelector().withColumn(20).sortedByRow().asList();

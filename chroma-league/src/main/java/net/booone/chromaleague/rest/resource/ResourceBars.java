@@ -1,4 +1,4 @@
-package net.booone.chromaleague.hud.parts.resource;
+package net.booone.chromaleague.rest.resource;
 
 import net.booone.chromaleague.state.RunningState;
 import net.booone.razersdk.animation.IFrame;
@@ -36,8 +36,9 @@ public final class ResourceBars {
         if (ENERGY_BAR_CHAMPIONS.contains(activePlayerChampionName)) {
             return new EnergyBar();
         }
-
+        System.out.println(activePlayerChampionName);
         return switch (activePlayerChampionName) {
+            case "Bel'Veth" -> new BelVethFormBar();
             case "Gnar" -> new GnarFuryBar();
             case "Kled" -> new KledCourageBar();
             case "Mordekaiser" -> new MordekaiserShieldBar();

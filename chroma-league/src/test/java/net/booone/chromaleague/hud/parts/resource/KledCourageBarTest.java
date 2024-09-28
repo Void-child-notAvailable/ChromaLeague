@@ -2,6 +2,7 @@ package net.booone.chromaleague.hud.parts.resource;
 
 import net.booone.chromaleague.IntSteps;
 import net.booone.chromaleague.hud.AnimationTester;
+import net.booone.chromaleague.rest.resource.KledCourageBar;
 import org.junit.jupiter.api.Test;
 
 class KledCourageBarTest extends AbstractResourceTest {
